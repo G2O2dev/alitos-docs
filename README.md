@@ -1,6 +1,6 @@
-# Alitas Docs
+# Alitos Docs
 
-Minimal Mintlify changelog for Alitas.
+Minimal Mintlify changelog for Alitos.
 
 ## Local preview
 
