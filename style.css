@@ -33,6 +33,15 @@ body > div > div > div {
   background-color: var(--alitos-bg) !important;
 }
 
+main div,
+main figure,
+main picture,
+main span:has(> img),
+main p:has(> img) {
+  background: var(--alitos-bg) !important;
+  background-color: var(--alitos-bg) !important;
+}
+
 /* Keep the docs shell visually out of the way while preserving the logo. */
 footer,
 aside:not(:has(img[src*="/logo/alitos.svg"])),
@@ -171,9 +180,9 @@ main p {
 
 main img {
   display: block;
-  width: min(100%, 860px);
+  width: min(100%, 720px);
   height: auto;
-  max-width: 860px;
+  max-width: 720px;
   margin: 22px auto 0;
   border: 1px solid var(--alitos-border);
   border-radius: 8px;
@@ -181,6 +190,33 @@ main img {
   visibility: visible !important;
   background: transparent !important;
   background-color: transparent !important;
+}
+
+main img[src*="balance-kc-sidebar"],
+main img[src*="gcc-office-create"] {
+  width: min(100%, 360px);
+  max-width: 360px;
+}
+
+main img[src*="profile-settings"] {
+  width: min(100%, 420px);
+  max-width: 420px;
+}
+
+.alitos-mobile-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: min(100%, 760px);
+  max-width: 760px;
+  margin: 24px auto 0;
+  background: var(--alitos-bg) !important;
+}
+
+.alitos-mobile-row img {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
 }
 
 @media (max-width: 960px) {
@@ -201,5 +237,10 @@ main img {
   main h3 + p + p,
   main h3 + p + p + p {
     max-width: 100%;
+  }
+
+  .alitos-mobile-row {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100%, 300px);
   }
 }
