@@ -28,7 +28,16 @@ body {
 
 body > div,
 body > div > div,
-body > div > div > div {
+body > div > div > div,
+body > div > div > div > div,
+body > div > div > div > div > div,
+body > div > div > div > div > div > div,
+[class*="content" i],
+[class*="container" i],
+[class*="page" i],
+[class*="layout" i],
+[class*="prose" i],
+[class*="mdx" i] {
   background: var(--alitos-bg) !important;
   background-color: var(--alitos-bg) !important;
 }
@@ -194,13 +203,17 @@ main img {
 
 main img[src*="balance-kc-sidebar"],
 main img[src*="gcc-office-create"] {
-  width: min(100%, 360px);
-  max-width: 360px;
+  width: auto;
+  max-width: min(100%, 300px);
+  height: 330px;
+  object-fit: contain;
 }
 
 main img[src*="profile-settings"] {
-  width: min(100%, 420px);
-  max-width: 420px;
+  width: auto;
+  max-width: min(100%, 300px);
+  height: 330px;
+  object-fit: contain;
 }
 
 .alitos-mobile-row {
@@ -215,8 +228,10 @@ main img[src*="profile-settings"] {
 
 .alitos-mobile-row img {
   width: 100% !important;
+  height: 330px !important;
   max-width: none !important;
   margin: 0 !important;
+  object-fit: contain;
 }
 
 @media (max-width: 960px) {
