@@ -28,7 +28,11 @@
     }
   },
   "favicon": "/logo/favicon.svg",
-  "logo": "/logo/alitos.svg",
+  "logo": {
+    "light": "/logo/alitos.svg",
+    "dark": "/logo/alitos.svg",
+    "href": "https://alitos.io"
+  },
   "contextual": {
     "options": []
   },

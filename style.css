@@ -73,6 +73,7 @@ a[href="/"]:not(:has(img)) {
 header button,
 header [role="button"],
 header a:not(:has(img)),
+header .flex-1.relative.hidden.lg\:flex.items-center.justify-end.gap-3,
 button[aria-label*="assistant" i],
 button[aria-label*="Ask" i],
 button[aria-label*="AI" i],
