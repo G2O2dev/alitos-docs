@@ -194,7 +194,7 @@ main img {
   width: min(100%, 720px);
   height: auto;
   max-width: 720px;
-  margin: 22px auto 0;
+  margin: 22px 0 0;
   border: 1px solid var(--alitos-border);
   border-radius: 8px;
   opacity: 1 !important;
@@ -208,7 +208,7 @@ img[data-path^="images/changelog/"] {
   width: min(100%, 720px) !important;
   max-width: 720px !important;
   height: auto !important;
-  margin: 22px auto 0 !important;
+  margin: 22px 0 0 !important;
   border: 1px solid var(--alitos-border) !important;
   border-radius: 8px !important;
   opacity: 1 !important;
@@ -240,10 +240,10 @@ img[data-path*="profile-settings"] {
   display: block !important;
   width: auto !important;
   max-width: min(100%, 345px) !important;
-  height: 720px !important;
+  height: auto !important;
   max-height: 720px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   object-fit: contain !important;
   aspect-ratio: auto !important;
 }
@@ -260,10 +260,10 @@ picture:has(img[data-path*="profile-settings"]) {
   display: block !important;
   width: min(100%, 345px) !important;
   max-width: 345px !important;
-  height: 720px !important;
+  height: auto !important;
   max-height: 720px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   overflow: hidden !important;
   background: var(--alitos-bg) !important;
   background-color: var(--alitos-bg) !important;
@@ -281,10 +281,10 @@ main div:has(> img[data-path*="gcc-office-create"]),
 main div:has(> img[data-path*="profile-settings"]) {
   width: min(100%, 345px) !important;
   max-width: 345px !important;
-  height: 720px !important;
+  height: auto !important;
   max-height: 720px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   overflow: hidden !important;
   aspect-ratio: auto !important;
 }
