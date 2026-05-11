@@ -210,10 +210,30 @@ main img[data-path*="balance-kc-sidebar"],
 main img[data-path*="gcc-office-create"],
 main img[data-path*="profile-settings"] {
   width: auto !important;
-  max-width: min(100%, 260px) !important;
-  height: 300px !important;
-  max-height: 300px !important;
+  max-width: min(100%, 345px) !important;
+  height: 720px !important;
+  max-height: 720px !important;
   object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+main p:has(> img[data-path*="balance-kc-sidebar"]),
+main p:has(> img[data-path*="gcc-office-create"]),
+main p:has(> img[data-path*="profile-settings"]),
+main figure:has(img[data-path*="balance-kc-sidebar"]),
+main figure:has(img[data-path*="gcc-office-create"]),
+main figure:has(img[data-path*="profile-settings"]),
+main div:has(> img[data-path*="balance-kc-sidebar"]),
+main div:has(> img[data-path*="gcc-office-create"]),
+main div:has(> img[data-path*="profile-settings"]) {
+  width: min(100%, 345px) !important;
+  max-width: 345px !important;
+  height: 720px !important;
+  max-height: 720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  overflow: hidden !important;
+  aspect-ratio: auto !important;
 }
 
 .alitos-mobile-row {
