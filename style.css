@@ -1,0 +1,47 @@
+:root {
+  --alitos-bg: #000000;
+  --alitos-surface: #0c0c0d;
+  --alitos-surface-hover: #161618;
+  --alitos-border: #202022;
+  --alitos-border-strong: #2a2a2d;
+  --alitos-text: #f5f5f5;
+  --alitos-text-muted: #b5b5ba;
+  --alitos-text-faint: #7a7a85;
+  --alitos-accent: #3374ff;
+}
+
+html.dark {
+  background: var(--alitos-bg);
+}
+
+body {
+  letter-spacing: 0;
+}
+
+main {
+  max-width: 760px;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+p {
+  color: var(--alitos-text-muted);
+}
+
+main img {
+  border: 1px solid var(--alitos-border);
+  border-radius: 8px;
+  background: var(--alitos-surface);
+}
+
+.changelog-image--narrow {
+  max-width: 420px;
+}

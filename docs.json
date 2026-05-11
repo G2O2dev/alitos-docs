@@ -1,11 +1,32 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Alitas Docs",
+  "theme": "willow",
+  "name": "Alitas",
+  "description": "Product updates and release notes for Alitas.",
   "colors": {
-    "primary": "#2563EB",
-    "light": "#3B82F6",
-    "dark": "#1D4ED8"
+    "primary": "#3374FF",
+    "light": "#4D91FF",
+    "dark": "#195AE6"
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#F5F5F5",
+      "dark": "#000000"
+    }
+  },
+  "fonts": {
+    "body": {
+      "family": "Montserrat",
+      "weight": 400
+    },
+    "heading": {
+      "family": "Montserrat",
+      "weight": 500
+    }
   },
   "favicon": "/favicon.svg",
   "logo": {
@@ -13,49 +34,12 @@
     "dark": "/logo/dark.svg"
   },
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "guides/concepts"
-            ]
-          }
+        "group": "Updates",
+        "pages": [
+          "changelog"
         ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "groups": [
-          {
-            "group": "Releases",
-            "pages": [
-              "changelog"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@example.com"
       }
     ]
   },

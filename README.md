@@ -1,6 +1,6 @@
-# AlitasDocs
+# Alitas Docs
 
-Mintlify documentation project for Alitas.
+Minimal Mintlify changelog for Alitas.
 
 ## Local preview
 
@@ -32,10 +32,8 @@ docs.your-domain.com
 
 ```text
 docs.json
-index.mdx
-quickstart.mdx
-guides/
-api-reference/
+changelog.mdx
 images/
 logo/
+style.css
 ```
