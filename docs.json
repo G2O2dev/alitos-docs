@@ -2,7 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "willow",
   "name": "Alitas",
-  "description": "Product updates and release notes for Alitas.",
   "colors": {
     "primary": "#3374FF",
     "light": "#4D91FF",
@@ -34,13 +33,8 @@
     "options": []
   },
   "navigation": {
-    "groups": [
-      {
-        "group": "Updates",
-        "pages": [
-          "changelog"
-        ]
-      }
+    "pages": [
+      "changelog"
     ]
   },
   "redirects": [

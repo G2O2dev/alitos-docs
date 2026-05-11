@@ -14,12 +14,16 @@ html.dark {
   background: var(--alitos-bg);
 }
 
+html,
 body {
+  background: var(--alitos-bg) !important;
   letter-spacing: 0;
 }
 
 main {
-  max-width: 760px;
+  max-width: 1120px;
+  width: 100%;
+  background: var(--alitos-bg) !important;
 }
 
 h1,
@@ -29,11 +33,18 @@ h3 {
 }
 
 h2 {
-  margin-top: 2rem;
+  margin: 0;
+  color: var(--alitos-text);
+  font-size: 22px;
+  line-height: 1.28;
+  font-weight: 500;
 }
 
 p {
+  margin: 0;
   color: var(--alitos-text-muted);
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 main img {
@@ -44,6 +55,90 @@ main img {
 
 .changelog-image--narrow {
   max-width: 420px;
+}
+
+main :not(img):not(svg):not(path) {
+  background-color: transparent !important;
+}
+
+main h1,
+main h1 + p {
+  display: none !important;
+}
+
+.alitos-changelog {
+  display: grid;
+  grid-template-columns: minmax(92px, 140px) minmax(0, 860px);
+  gap: 64px;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  margin: 26px auto 96px;
+  background: var(--alitos-bg);
+}
+
+.alitos-release-meta {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 2px;
+  background: var(--alitos-bg);
+}
+
+.alitos-release-version {
+  color: var(--alitos-text);
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.alitos-release-channel {
+  color: var(--alitos-text-faint);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.alitos-release-body {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  min-width: 0;
+}
+
+.alitos-release-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  background: var(--alitos-bg);
+}
+
+.alitos-release-section + .alitos-release-section {
+  padding-top: 2px;
+}
+
+.alitos-release-section > img {
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+}
+
+.alitos-release-section > .changelog-image--narrow {
+  width: min(420px, 100%);
+}
+
+.alitos-mobile-images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.alitos-mobile-images img {
+  width: 100%;
+  height: auto;
 }
 
 a[href="/"],
@@ -84,4 +179,33 @@ nav [role="search"],
 button[aria-label*="search" i],
 [data-testid*="search" i] {
   display: none !important;
+}
+
+@media (max-width: 960px) {
+  main {
+    max-width: 100%;
+  }
+
+  .alitos-changelog {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    margin-top: 18px;
+  }
+
+  .alitos-release-meta {
+    position: static;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .alitos-release-body {
+    gap: 44px;
+  }
+}
+
+@media (max-width: 720px) {
+  .alitos-mobile-images {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
