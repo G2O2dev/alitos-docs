@@ -46,6 +46,9 @@ a[href="/"]:not(:has(img)) {
 }
 
 /* Hide Mintlify AI and search affordances. */
+header button,
+header [role="button"],
+header a:not(:has(img)),
 button[aria-label*="assistant" i],
 button[aria-label*="Ask" i],
 button[aria-label*="AI" i],
@@ -78,17 +81,17 @@ header a:has(img),
 aside a:has(img),
 nav a:has(img) {
   display: inline-flex !important;
-  width: 44px !important;
-  min-width: 44px !important;
-  height: 44px !important;
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 34px !important;
   overflow: hidden !important;
   align-items: center !important;
   gap: 0 !important;
 }
 
 a:has(img) img[src*="/logo/alitos.svg"] {
-  width: 44px !important;
-  height: 44px !important;
+  width: 34px !important;
+  height: 34px !important;
   max-width: none !important;
 }
 
@@ -101,7 +104,7 @@ main {
   width: min(100%, 1220px) !important;
   max-width: 1220px !important;
   margin: 0 auto !important;
-  padding: 46px 48px 112px !important;
+  padding: 72px 48px 112px !important;
 }
 
 main *:not(img):not(svg):not(path) {
@@ -117,8 +120,8 @@ main h1 + p {
 
 main h2:first-of-type {
   position: absolute;
-  left: 48px;
-  top: 50px;
+  left: 52px;
+  top: 76px;
   margin: 0 !important;
   color: var(--alitos-text);
   font-size: 15px !important;
@@ -129,8 +132,8 @@ main h2:first-of-type {
 
 main h2:first-of-type + p {
   position: absolute;
-  left: 48px;
-  top: 74px;
+  left: 52px;
+  top: 100px;
   margin: 0 !important;
   color: var(--alitos-text-faint);
   font-size: 13px !important;
