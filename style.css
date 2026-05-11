@@ -204,18 +204,16 @@ main img {
 }
 
 main img[src*="balance-kc-sidebar"],
-main img[src*="gcc-office-create"] {
-  width: auto;
-  max-width: min(100%, 300px);
-  height: 330px;
-  object-fit: contain;
-}
-
-main img[src*="profile-settings"] {
-  width: auto;
-  max-width: min(100%, 300px);
-  height: 330px;
-  object-fit: contain;
+main img[src*="gcc-office-create"],
+main img[src*="profile-settings"],
+main img[data-path*="balance-kc-sidebar"],
+main img[data-path*="gcc-office-create"],
+main img[data-path*="profile-settings"] {
+  width: auto !important;
+  max-width: min(100%, 260px) !important;
+  height: 300px !important;
+  max-height: 300px !important;
+  object-fit: contain !important;
 }
 
 .alitos-mobile-row {
@@ -230,10 +228,11 @@ main img[src*="profile-settings"] {
 
 .alitos-mobile-row img {
   width: 100% !important;
-  height: 330px !important;
+  height: 300px !important;
+  max-height: 300px !important;
   max-width: none !important;
   margin: 0 !important;
-  object-fit: contain;
+  object-fit: contain !important;
 }
 
 @media (max-width: 960px) {
