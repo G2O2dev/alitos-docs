@@ -1,166 +1,51 @@
 :root {
   --alitos-bg: #000000;
-  --alitos-surface: #0c0c0d;
-  --alitos-surface-hover: #161618;
   --alitos-border: #202022;
-  --alitos-border-strong: #2a2a2d;
   --alitos-text: #f5f5f5;
   --alitos-text-muted: #b5b5ba;
   --alitos-text-faint: #7a7a85;
   --alitos-accent: #3374ff;
 }
 
-html.dark {
-  background: var(--alitos-bg);
-}
-
 html,
+body,
+body *,
+main,
+section,
+article,
+aside,
+nav,
+header,
+footer {
+  background: var(--alitos-bg) !important;
+  background-color: var(--alitos-bg) !important;
+  box-shadow: none !important;
+}
+
 body {
-  background: var(--alitos-bg) !important;
-  letter-spacing: 0;
-}
-
-main {
-  max-width: 1120px;
-  width: 100%;
-  background: var(--alitos-bg) !important;
-}
-
-h1,
-h2,
-h3 {
-  letter-spacing: 0;
-}
-
-h2 {
-  margin: 0;
   color: var(--alitos-text);
-  font-size: 22px;
-  line-height: 1.28;
-  font-weight: 500;
+  letter-spacing: 0;
 }
 
-p {
-  margin: 0;
-  color: var(--alitos-text-muted);
-  font-size: 15px;
-  line-height: 1.65;
-}
-
-main img {
-  border: 1px solid var(--alitos-border);
-  border-radius: 8px;
-  background: var(--alitos-surface);
-}
-
-.changelog-image--narrow {
-  max-width: 420px;
-}
-
-main :not(img):not(svg):not(path) {
-  background-color: transparent !important;
-}
-
-main h1,
-main h1 + p {
+/* Keep the docs shell visually out of the way while preserving the logo. */
+footer,
+aside:not(:has(img[src*="/logo/alitos.svg"])),
+nav:not(:has(img[src*="/logo/alitos.svg"])),
+[class*="toc" i],
+[class*="table-of-contents" i],
+[aria-label*="on this page" i],
+[aria-label*="table of contents" i],
+[data-testid*="toc" i],
+[data-testid*="footer" i] {
   display: none !important;
 }
 
-.alitos-changelog {
-  display: grid;
-  grid-template-columns: minmax(92px, 140px) minmax(0, 860px);
-  gap: 64px;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  margin: 26px auto 96px;
-  background: var(--alitos-bg);
-}
-
-.alitos-release-meta {
-  position: sticky;
-  top: 96px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-top: 2px;
-  background: var(--alitos-bg);
-}
-
-.alitos-release-version {
-  color: var(--alitos-text);
-  font-size: 15px;
-  line-height: 1.35;
-  font-weight: 500;
-}
-
-.alitos-release-channel {
-  color: var(--alitos-text-faint);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.alitos-release-body {
-  display: flex;
-  flex-direction: column;
-  gap: 58px;
-  min-width: 0;
-}
-
-.alitos-release-section {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-width: 0;
-  background: var(--alitos-bg);
-}
-
-.alitos-release-section + .alitos-release-section {
-  padding-top: 2px;
-}
-
-.alitos-release-section > img {
-  width: 100%;
-  height: auto;
-  margin-top: 8px;
-}
-
-.alitos-release-section > .changelog-image--narrow {
-  width: min(420px, 100%);
-}
-
-.alitos-mobile-images {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.alitos-mobile-images img {
-  width: 100%;
-  height: auto;
-}
-
-a[href="/"],
-a[href="/changelog"] {
-  letter-spacing: 0;
-}
-
-header a[href="/"]:has(img),
-aside a[href="/"]:has(img),
-nav a[href="/"]:has(img) {
-  width: 34px;
-  min-width: 34px;
-  overflow: hidden;
-  gap: 0;
-}
-
-header a[href="/"]:has(img) span,
-aside a[href="/"]:has(img) span,
-nav a[href="/"]:has(img) span {
+a[href="/changelog"]:not(:has(img)),
+a[href="/"]:not(:has(img)) {
   display: none !important;
 }
 
+/* Hide Mintlify AI and search affordances. */
 button[aria-label*="assistant" i],
 button[aria-label*="Ask" i],
 button[aria-label*="AI" i],
@@ -168,44 +53,146 @@ button[aria-label*="AI" i],
 [aria-label*="Ask AI" i],
 [data-testid*="assistant" i],
 [class*="assistant" i],
-[class*="ai-chat" i] {
-  display: none !important;
-}
-
-aside input[type="search"],
-aside [role="search"],
-nav input[type="search"],
-nav [role="search"],
+[class*="ai-chat" i],
+[class*="ask-ai" i],
+[class*="ask" i],
+input[type="search"],
+[role="search"],
 button[aria-label*="search" i],
 [data-testid*="search" i] {
   display: none !important;
 }
 
-@media (max-width: 960px) {
-  main {
-    max-width: 100%;
-  }
-
-  .alitos-changelog {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
-    margin-top: 18px;
-  }
-
-  .alitos-release-meta {
-    position: static;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 10px;
-  }
-
-  .alitos-release-body {
-    gap: 44px;
-  }
+/* Remove social/footer branding that is irrelevant for a changelog-only site. */
+a[href*="github.com" i],
+a[href*="mintlify" i],
+[class*="powered" i],
+[class*="footer" i] {
+  display: none !important;
 }
 
-@media (max-width: 720px) {
-  .alitos-mobile-images {
-    grid-template-columns: minmax(0, 1fr);
+/* Logo only, larger than the default theme mark. */
+a[href="/"]:has(img),
+a[href="/changelog"]:has(img),
+header a:has(img),
+aside a:has(img),
+nav a:has(img) {
+  display: inline-flex !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 44px !important;
+  overflow: hidden !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+a:has(img) img[src*="/logo/alitos.svg"] {
+  width: 44px !important;
+  height: 44px !important;
+  max-width: none !important;
+}
+
+a:has(img) span {
+  display: none !important;
+}
+
+main {
+  position: relative;
+  width: min(100%, 1220px) !important;
+  max-width: 1220px !important;
+  margin: 0 auto !important;
+  padding: 46px 48px 112px !important;
+}
+
+main *:not(img):not(svg):not(path) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+main h1,
+body h1,
+main h1 + p {
+  display: none !important;
+}
+
+main h2:first-of-type {
+  position: absolute;
+  left: 48px;
+  top: 50px;
+  margin: 0 !important;
+  color: var(--alitos-text);
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+main h2:first-of-type + p {
+  position: absolute;
+  left: 48px;
+  top: 74px;
+  margin: 0 !important;
+  color: var(--alitos-text-faint);
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+}
+
+main h3,
+main h3 + p,
+main h3 + p + p,
+main h3 + p + p + p {
+  max-width: 860px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+main h3 {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+  color: var(--alitos-text);
+  font-size: 22px !important;
+  line-height: 1.28 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+main h3:not(:first-of-type) {
+  margin-top: 58px !important;
+}
+
+main p {
+  color: var(--alitos-text-muted);
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+main img {
+  display: block;
+  width: min(100%, 860px);
+  height: auto;
+  max-width: 860px;
+  margin: 22px auto 0;
+  border: 1px solid var(--alitos-border);
+  border-radius: 8px;
+}
+
+@media (max-width: 960px) {
+  main {
+    padding: 34px 22px 72px !important;
+  }
+
+  main h2:first-of-type,
+  main h2:first-of-type + p {
+    position: static;
+    display: inline-block;
+    margin-right: 10px !important;
+    margin-bottom: 28px !important;
+  }
+
+  main h3,
+  main h3 + p,
+  main h3 + p + p,
+  main h3 + p + p + p {
+    max-width: 100%;
   }
 }
