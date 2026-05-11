@@ -9,7 +9,6 @@
 
 html,
 body,
-body *,
 main,
 section,
 article,
@@ -25,6 +24,13 @@ footer {
 body {
   color: var(--alitos-text);
   letter-spacing: 0;
+}
+
+body > div,
+body > div > div,
+body > div > div > div {
+  background: var(--alitos-bg) !important;
+  background-color: var(--alitos-bg) !important;
 }
 
 /* Keep the docs shell visually out of the way while preserving the logo. */
@@ -58,7 +64,6 @@ button[aria-label*="AI" i],
 [class*="assistant" i],
 [class*="ai-chat" i],
 [class*="ask-ai" i],
-[class*="ask" i],
 input[type="search"],
 [role="search"],
 button[aria-label*="search" i],
@@ -105,11 +110,6 @@ main {
   max-width: 1220px !important;
   margin: 0 auto !important;
   padding: 72px 48px 112px !important;
-}
-
-main *:not(img):not(svg):not(path) {
-  background: transparent !important;
-  background-color: transparent !important;
 }
 
 main h1,
@@ -177,6 +177,10 @@ main img {
   margin: 22px auto 0;
   border: 1px solid var(--alitos-border);
   border-radius: 8px;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 @media (max-width: 960px) {
