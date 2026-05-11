@@ -203,6 +203,20 @@ main img {
   background-color: transparent !important;
 }
 
+img[data-path^="images/changelog/"] {
+  display: block !important;
+  width: min(100%, 720px) !important;
+  max-width: 720px !important;
+  height: auto !important;
+  margin: 22px auto 0 !important;
+  border: 1px solid var(--alitos-border) !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
 main img[src*="balance-kc-sidebar"],
 main img[src*="gcc-office-create"],
 main img[src*="profile-settings"],
@@ -214,6 +228,45 @@ main img[data-path*="profile-settings"] {
   height: 720px !important;
   max-height: 720px !important;
   object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+img[src*="balance-kc-sidebar"],
+img[src*="gcc-office-create"],
+img[src*="profile-settings"],
+img[data-path*="balance-kc-sidebar"],
+img[data-path*="gcc-office-create"],
+img[data-path*="profile-settings"] {
+  display: block !important;
+  width: auto !important;
+  max-width: min(100%, 345px) !important;
+  height: 720px !important;
+  max-height: 720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+span[data-rmiz]:has(img[data-path*="balance-kc-sidebar"]),
+span[data-rmiz]:has(img[data-path*="gcc-office-create"]),
+span[data-rmiz]:has(img[data-path*="profile-settings"]),
+span[data-rmiz-content]:has(img[data-path*="balance-kc-sidebar"]),
+span[data-rmiz-content]:has(img[data-path*="gcc-office-create"]),
+span[data-rmiz-content]:has(img[data-path*="profile-settings"]),
+picture:has(img[data-path*="balance-kc-sidebar"]),
+picture:has(img[data-path*="gcc-office-create"]),
+picture:has(img[data-path*="profile-settings"]) {
+  display: block !important;
+  width: min(100%, 345px) !important;
+  max-width: 345px !important;
+  height: 720px !important;
+  max-height: 720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  overflow: hidden !important;
+  background: var(--alitos-bg) !important;
+  background-color: var(--alitos-bg) !important;
   aspect-ratio: auto !important;
 }
 
