@@ -45,3 +45,43 @@ main img {
 .changelog-image--narrow {
   max-width: 420px;
 }
+
+a[href="/"],
+a[href="/changelog"] {
+  letter-spacing: 0;
+}
+
+header a[href="/"]:has(img),
+aside a[href="/"]:has(img),
+nav a[href="/"]:has(img) {
+  width: 34px;
+  min-width: 34px;
+  overflow: hidden;
+  gap: 0;
+}
+
+header a[href="/"]:has(img) span,
+aside a[href="/"]:has(img) span,
+nav a[href="/"]:has(img) span {
+  display: none !important;
+}
+
+button[aria-label*="assistant" i],
+button[aria-label*="Ask" i],
+button[aria-label*="AI" i],
+[aria-label*="assistant" i],
+[aria-label*="Ask AI" i],
+[data-testid*="assistant" i],
+[class*="assistant" i],
+[class*="ai-chat" i] {
+  display: none !important;
+}
+
+aside input[type="search"],
+aside [role="search"],
+nav input[type="search"],
+nav [role="search"],
+button[aria-label*="search" i],
+[data-testid*="search" i] {
+  display: none !important;
+}
