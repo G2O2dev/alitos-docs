@@ -43,6 +43,12 @@
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/changelog"
+    }
+  ],
   "footer": {
     "socials": {
       "github": "https://github.com/G2O2dev"
