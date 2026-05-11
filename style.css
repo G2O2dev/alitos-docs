@@ -194,7 +194,7 @@ main img {
   width: min(100%, 720px);
   height: auto;
   max-width: 720px;
-  margin: 22px 0 0;
+  margin: 10px 0 0;
   border: 1px solid var(--alitos-border);
   border-radius: 8px;
   opacity: 1 !important;
@@ -208,7 +208,7 @@ img[data-path^="images/changelog/"] {
   width: min(100%, 720px) !important;
   max-width: 720px !important;
   height: auto !important;
-  margin: 22px 0 0 !important;
+  margin: 0 !important;
   border: 1px solid var(--alitos-border) !important;
   border-radius: 8px !important;
   opacity: 1 !important;
@@ -268,6 +268,20 @@ picture:has(img[data-path*="profile-settings"]) {
   background: var(--alitos-bg) !important;
   background-color: var(--alitos-bg) !important;
   aspect-ratio: auto !important;
+}
+
+span[data-rmiz]:has(img[data-path^="images/changelog/"]),
+span[data-rmiz-content]:has(img[data-path^="images/changelog/"]),
+picture:has(img[data-path^="images/changelog/"]) {
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+}
+
+span[data-as="p"] + span[data-rmiz],
+p + span[data-rmiz],
+span[data-as="p"] + p:has(img[data-path^="images/changelog/"]),
+p + p:has(img[data-path^="images/changelog/"]) {
+  margin-top: 10px !important;
 }
 
 main p:has(> img[data-path*="balance-kc-sidebar"]),
