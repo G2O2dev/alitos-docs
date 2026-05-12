@@ -21,7 +21,6 @@ async function walk(dir) {
 
 function stripExternalHeadReferences(html) {
   return html
-    .replace(/<script[^>]*>[\s\S]*?d4tuoctqmanu0\.cloudfront\.net\/katex\.min\.css[\s\S]*?<\/script>/g, '')
     .replace(/<link[^>]+href="https:\/\/d4tuoctqmanu0\.cloudfront\.net\/katex\.min\.css"[^>]*>/g, '')
     .replace(/<link[^>]+href="https:\/\/fonts\.googleapis\.com[^"]*"[^>]*>/g, '')
     .replace(/<link[^>]+href="https:\/\/fonts\.gstatic\.com[^"]*"[^>]*>/g, '')
