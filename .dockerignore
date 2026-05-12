@@ -1,0 +1,7 @@
+.git
+.mintlify
+node_modules
+*.zip
+export-test-*
+.env
+.env.*
