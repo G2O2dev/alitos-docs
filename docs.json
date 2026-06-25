@@ -3,9 +3,9 @@
   "theme": "willow",
   "name": "Alitos",
   "colors": {
-    "primary": "#3374FF",
-    "light": "#4D91FF",
-    "dark": "#195AE6"
+    "primary": "#fcb92c",
+    "light": "#f2f2fa",
+    "dark": "#aaa9a6"
   },
   "appearance": {
     "default": "dark",
@@ -27,24 +27,62 @@
       "weight": 500
     }
   },
-  "favicon": "/logo/favicon.svg",
+  "favicon": "https://media.brand.dev/235cbe43-9803-43b3-b518-92618b987ae7.png",
   "logo": {
-    "light": "/logo/alitos.svg",
-    "dark": "/logo/alitos.svg",
+    "light": "https://media.brand.dev/fd0eee97-fe01-405a-ad75-a4f7b4a645cb.png",
+    "dark": "https://media.brand.dev/fd0eee97-fe01-405a-ad75-a4f7b4a645cb.png",
     "href": "https://alitos.io"
   },
   "contextual": {
     "options": []
   },
   "navigation": {
-    "pages": [
-      "changelog"
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/cabinets",
+              "features/balances",
+              "features/filters",
+              "features/grouping"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "settings/profile",
+              "settings/account"
+            ]
+          },
+          {
+            "group": "Mobile",
+            "pages": [
+              "mobile/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Releases",
+            "pages": [
+              "changelog"
+            ]
+          }
+        ]
+      }
     ]
-  },
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/changelog"
-    }
-  ]
+  }
 }

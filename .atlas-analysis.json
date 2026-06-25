@@ -1,0 +1,75 @@
+{
+  "projectType": "saas",
+  "projectName": "Alitos",
+  "projectDescription": "Alitos is a SaaS platform for managing advertising cabinets, tracking balances, applying filter sets, and organizing campaigns across call centers (КЦ) and client-generation (ГЦК) accounts.",
+  "theme": "willow",
+  "primaryColor": "#fcb92c",
+  "lightColor": "#f2f2fa",
+  "darkColor": "#aaa9a6",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/cabinets",
+              "features/balances",
+              "features/filters",
+              "features/grouping"
+            ]
+          },
+          {
+            "group": "Account & Settings",
+            "pages": [
+              "settings/profile",
+              "settings/account"
+            ]
+          },
+          {
+            "group": "Mobile",
+            "pages": [
+              "mobile/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Releases",
+            "pages": [
+              "changelog"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Advertising cabinet management (create, view, copy cabinet fields)",
+    "Call center (КЦ) balance display in the sidebar",
+    "ГЦК office creation directly from Alitos",
+    "Filter sets with grouping by advertising manager (АМ) and мГЦК",
+    "Profile settings (login, password, account data)",
+    "Mobile-responsive interface (~90% functionality on phone)",
+    "Changelog with screenshots per release"
+  ],
+  "publicApiSurface": [
+    "Cabinet list with copyable fields",
+    "КЦ balance widget (sidebar)",
+    "ГЦК cabinet creation flow",
+    "Filter sets UI",
+    "Grouping by АМ and мГЦК",
+    "Profile settings page"
+  ]
+}
